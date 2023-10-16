@@ -1,7 +1,7 @@
 'use client'
 
 import type { FC } from 'react'
-import { Box, Button, Flex, VStack } from '@kuma-ui/core'
+import { Box, Button, Flex, VStack, css } from '@kuma-ui/core'
 import { saveAs } from 'file-saver'
 import { ArrowLeftIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -10,26 +10,36 @@ const Installation: FC = () => {
   return (
     <>
       <Link href="/">
-        <Button position="fixed" top="5" left="5">
+        <Button position="fixed" top="1rem" left="1rem">
           <ArrowLeftIcon />
         </Button>
       </Link>
 
       <Flex justify="center">
-        <VStack alignItems="center" gap="2rem" marginTop="1rem">
+        <VStack alignItems="center" gap="1rem" marginTop="3rem">
           <VStack alignItems="center" gap="1rem">
-            <Box color="white" fontSize="2rem">
+            <Box color="white" fontSize="1.5rem" textAlign="center">
               🤔 How to install the extension?
             </Box>
 
-            <video muted width="700" controls style={{ borderRadius: '5px' }}>
-              <source src="/installation.webm" type="video/webm" />
+            <video
+              muted
+              controls
+              style={{ borderRadius: '5px' }}
+              className={css`
+                width: 30rem;
+                @media (max-width: 1200px) {
+                  width: 19rem;
+                }
+              `}
+            >
+              <source src="/installation.mp4" type="video/mp4" />
             </video>
           </VStack>
 
           <VStack
             color="white"
-            fontSize="2rem"
+            fontSize="1.5rem"
             textAlign="center"
             alignItems="center"
           >

@@ -81,10 +81,10 @@ const Home: FC = () => {
           alignItems="center"
         >
           <Image src="/KEKW.webp" alt="KEKW" width={40} height={40} />
-          <Box color="white" fontSize="xx-large">
+          <Box color="white" fontSize={['x-large', 'xx-large']}>
             KEKW for
           </Box>
-          <Box color="#2dd4bf" fontSize="xx-large">
+          <Box color="#2dd4bf" fontSize={['x-large', 'xx-large']}>
             HLTV.org
           </Box>
         </HStack>
@@ -126,17 +126,22 @@ const Home: FC = () => {
         />
       </Spring>
 
-      <Grid gridTemplateColumns="repeat(3, 1fr)" gap="1rem">
+      <Grid
+        gridTemplateColumns={['repeat(2, 1fr)', 'repeat(3, 1fr)']}
+        gap="1rem"
+      >
         {[
           ':tf:',
           'CiGrip',
           'DatSauce',
           'ForeverAlone',
-          'GabeN',
-          'HailHelix',
-          'ShoopDaWhoop',
           'M&Mjc',
+          'KEKW',
+          'KEKWait',
           'bttvNice',
+          'catJAM',
+          'OMEGALUL',
+          'NOMEGALUL',
           'TwaT',
           'WatChuSay',
           'tehPoleCat',
@@ -157,6 +162,7 @@ const Home: FC = () => {
           'haHAA',
           'FeelsBirthdayMan',
           'RonSmug',
+          'ShoopDaWhoop',
           'KappaCool',
           'FeelsBadMan',
           'bUrself',
@@ -166,6 +172,7 @@ const Home: FC = () => {
           'NaM',
           'SourPls',
           'FeelsSnowMan',
+          'GabeN',
           'FeelsSnowyMan',
           'LUL',
           'SaltyCorn',
@@ -182,15 +189,13 @@ const Home: FC = () => {
           'cvL',
           'cvHazmat',
           'cvMask',
-          'KEKW',
           'LULW',
+          'HailHelix',
           'monkaW',
           'PogU',
           'PogChamp',
           'WeirdChamp',
-          'OMEGALUL',
           'Kappa',
-          'NOMEGALUL',
           'DogChamp'
         ].map((imageSrc, index) => {
           if (imageSrc.toLowerCase().includes(emoteInputValue.toLowerCase())) {
